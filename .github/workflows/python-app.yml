@@ -40,13 +40,13 @@ jobs:
   deploy:
     run-on : ubuntu-latest
     needs: build
-    if: github.ref== 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     steps:
-    - name: checkout out
-    - uses: actions/checkout@v4
+      - name: checkout out
+      - uses: actions/checkout@v4
 
-    - name : Deploy to producation
-      run: |
-        echo "Starting deployment...."
-    
+      - name : Deploy to producation
+        run: |
+          echo "Starting deployment...."
+      
